@@ -1,0 +1,43 @@
+﻿step1：创建项目的SSH KEY
+ssh-keygen -t rsa -C "youremail@example.com"
+
+step2： 登陆github，打开“settings”的SSH and GPG keys页面，点NEW SSH KEY，填写Title 增加KEY
+
+step3： 打开项目clone SSH 代码到本地. 
+命令 git clone 
+更改个人名字：
+git config --global user.name ''
+git config --global user.email ''
+
+setp4：
+从远程库获取到本地：
+git pull
+
+
+
+！！！
+从本地提交到远程库
+git push origin master
+
+
+查看暂存区操作
+git status
+向暂存区提交
+git add "file_name"
+确认提交暂存区，添加到仓库
+git commit -m '备注信息'
+然后把仓库的代码推到GitHub中
+git push origin master
+
+！！！
+
+查看历史操作
+git log 使用
+
+回退历史版本到暂存区
+git reset HEAD^或版本号
+git checkout "file_name"
+
+
+
+
