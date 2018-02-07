@@ -1,10 +1,11 @@
 from django.db import models
 
+
 # Create your models here.
 # 标签类
 class Tag(models.Model):
   tag_name = models.CharField(max_length=20)
-  create_time = models.DataTimeField(auto_now_add=True)
+  create_time = models.DateTimeField(auto_now_add=True)
   
   def __str__(self):
     return self.tag_name
@@ -25,7 +26,7 @@ class Author(models.Model):
     website = models.URLField(blank=True)
     
     def __str__(self):
-      retrun u'%s' %(self.name)
+      return u'%s' % (self.name)
       
       
 # 文章类
@@ -36,7 +37,7 @@ class Article(models.Model):
     publish_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
-    classification = models.ForeignKey(Classification, on_delete=models.CASSCADE)
+    classification = models.ForeignKey(Classification, on_delete=models.CASCADE)
     tages = models.ManyToManyField(Tag, blank=True)
     content = models.TextField()
     
