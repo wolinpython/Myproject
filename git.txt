@@ -22,8 +22,15 @@ git push origin master
 
 查看暂存区操作
 git status
+执行 git diff 来查看执行 git status 的结果的详细信息
+尚未缓存的改动：git diff
+查看已缓存的改动： git diff --cached
+查看已缓存的与未缓存的所有改动：git diff HEAD
+显示摘要而非整个 diff：git diff --stat
+
 向暂存区提交
 git add "file_name"
+提交所有 git add -A
 确认提交暂存区，添加到仓库
 git commit -m '备注信息'
 然后把仓库的代码推到GitHub中
@@ -37,6 +44,24 @@ git log 使用
 回退历史版本到暂存区
 git reset HEAD^或版本号
 git checkout "file_name"
+
+
+查看配置信息
+git config --list
+
+
+Git 分支管理
+创建分支:git branch (branch_name)
+切换分支:git checkout (branch_name)
+合并分支:git merge
+
+
+标签
+创建标签: git tag -a v1.0   -a 选项意为"创建一个带注解的标签"
+查看已有标签: git tag
+查看此版本所修改内容: git show v1.0
+
+
 
 
 
